@@ -12,6 +12,7 @@
 		6001EC90197B502F00F97011 /* Kitchen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC8F197B502F00F97011 /* Kitchen.m */; };
 		73F148801EE0BA9300C5D821 /* Pizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F1487F1EE0BA9300C5D821 /* Pizza.m */; };
 		73F148831EE0C08500C5D821 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F148821EE0C08500C5D821 /* InputHandler.m */; };
+		73FB0AFB1EE1F014001B1E51 /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FB0AFA1EE1F014001B1E51 /* Manager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,9 @@
 		73F1487F1EE0BA9300C5D821 /* Pizza.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pizza.m; sourceTree = "<group>"; };
 		73F148811EE0C08500C5D821 /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
 		73F148821EE0C08500C5D821 /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
+		73FB0AF81EE1E0B6001B1E51 /* KitchenDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KitchenDelegate.h; sourceTree = "<group>"; };
+		73FB0AF91EE1F014001B1E51 /* Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
+		73FB0AFA1EE1F014001B1E51 /* Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +86,11 @@
 				6001EC83197B4EC300F97011 /* main.m */,
 				73F1487E1EE0BA9300C5D821 /* Pizza.h */,
 				73F1487F1EE0BA9300C5D821 /* Pizza.m */,
+				73FB0AF91EE1F014001B1E51 /* Manager.h */,
+				73FB0AFA1EE1F014001B1E51 /* Manager.m */,
 				73F148811EE0C08500C5D821 /* InputHandler.h */,
 				73F148821EE0C08500C5D821 /* InputHandler.m */,
+				73FB0AF81EE1E0B6001B1E51 /* KitchenDelegate.h */,
 				6001EC8E197B502F00F97011 /* Kitchen.h */,
 				6001EC8F197B502F00F97011 /* Kitchen.m */,
 				6001EC85197B4EC300F97011 /* Supporting Files */,
@@ -153,6 +160,7 @@
 				73F148801EE0BA9300C5D821 /* Pizza.m in Sources */,
 				6001EC90197B502F00F97011 /* Kitchen.m in Sources */,
 				73F148831EE0C08500C5D821 /* InputHandler.m in Sources */,
+				73FB0AFB1EE1F014001B1E51 /* Manager.m in Sources */,
 				6001EC84197B4EC300F97011 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

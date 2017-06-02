@@ -8,14 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "Pizza.h"
+#import "KitchenDelegate.h"
 
 @interface Kitchen : NSObject
 
-//@property id<KitchenDelegate> delegate;
-
 //property BOOL upgrade;
 
-
+@property (nonatomic, weak) id<KitchenDelegate> delegate;
 
 - (Pizza *)makePizzaWithSize:(PizzaSize)size toppings:(NSArray *)toppings;
 

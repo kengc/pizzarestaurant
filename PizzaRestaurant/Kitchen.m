@@ -9,11 +9,39 @@
 #import "Kitchen.h"
 #import "Pizza.h"
 
+
 @implementation Kitchen
 
 - (Pizza *)makePizzaWithSize:(PizzaSize)size toppings:(NSArray *)toppings
 {
-    Pizza *pizza = [[Pizza alloc] initWithPizzaSize:size andToppings:toppings];
+    Pizza *pizza;
+    PizzaSize largePizza = large;
+    
+    BOOL shouldMakePizza =  [self.delegate kitchen:self shouldMakePizzaOfSize:size andToppings:toppings];
+    
+    if(shouldMakePizza){
+        
+        BOOL shouldUpgradePizza = [self.delegate kitchenShouldUpgradeOrder:self];
+        
+        if(shouldUpgradePizza){
+            pizza = [[Pizza alloc] initWithPizzaSize:largePizza andToppings:toppings];
+            
+            //so, you'll have to check in code to see if, whoever the delegate is, actually implements this method.
+            //-(void)kitchenDidMakePizza:(Pizza *)pizza;
+            
+            if ([self.delegate respondsToSelector:@selector(kitchenDidMakePizza:)]) {
+                [self.delegate kitchenDidMakePizza:pizza];
+            }
+        
+            return pizza;
+        }
+        
+        
+    }
+    
+    
+    
+    
     return pizza;
 }
 
