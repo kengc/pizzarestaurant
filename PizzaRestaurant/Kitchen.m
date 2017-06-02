@@ -34,6 +34,16 @@
             }
         
             return pizza;
+        } else {
+            
+            pizza = [[Pizza alloc] initWithPizzaSize:size andToppings:toppings];
+            
+            
+            if ([self.delegate respondsToSelector:@selector(kitchenDidMakePizza:)]) {
+                [self.delegate kitchenDidMakePizza:pizza];
+            }
+            
+            return pizza;
         }
         
         

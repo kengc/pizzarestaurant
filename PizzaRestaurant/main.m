@@ -11,6 +11,8 @@
 #import "Kitchen.h"
 #import "InputHandler.h"
 #import "Pizza.h"
+#import "Manager.h"
+#import "ManagerHappy.h"
 
 //void accepOrder(kichen *restaurantKitchen)
 //cheerymanager *    //new
@@ -30,55 +32,78 @@ int main(int argc, const char * argv[])
 
     @autoreleasepool {
         
-        NSLog(@"Please pick your pizza size and toppings:");
+        Manager *managerMean = [[Manager alloc] init];
+        ManagerHappy *managerHappy = [[ManagerHappy alloc] init];
         
-        Kitchen *restaurantKitchen = [Kitchen new];
+        Kitchen *restaurantKitchen1 = [Kitchen new];
+        Kitchen *restaurantKitchen2 = [Kitchen new];
         
         PizzaSize pizzaSize;
         
-        NSMutableArray *words = [[NSMutableArray alloc] init];
+        restaurantKitchen1.delegate = managerMean;
+        restaurantKitchen2.delegate = managerHappy;
+        
+        //NSMutableArray *words = [[NSMutableArray alloc] init];
+        
         
         while (TRUE) {
             // Loop forever
             
-            //NSString *input = [InputHandler parseUserInput];
+            NSMutableArray *pizzaOrder = [InputHandler parseUserInput];
+            NSString *manager = [InputHandler getManagerInput];
             
-            NSLog(@"> ");
-            char str[100];
-            fgets (str, 100, stdin);
+//            NSLog(@"> ");
+//            char str[100];
+//            fgets (str, 100, stdin);
+//            
+//            NSString *inputString = [[NSString alloc] initWithUTF8String:str];
+//            
+//            inputString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+//            
+//            NSMutableArray *words = [[inputString componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] mutableCopy];
             
-            NSString *inputString = [[NSString alloc] initWithUTF8String:str];
-            inputString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            NSString * size = pizzaOrder[0];
             
-            NSMutableArray *words = [[inputString componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] mutableCopy];
-            
-            NSString * size = words[0];
-            
-            [words removeObjectAtIndex:0];
+            [pizzaOrder removeObjectAtIndex:0];
             
             Pizza *pizza;
             
-            if([size isEqualToString:@"small"]){
-                pizzaSize = small;
-                pizza = [restaurantKitchen makePizzaWithSize:pizzaSize toppings:words];
-            } else if ([size isEqualToString:@"medium"]){
-                pizzaSize = medium;
-                pizza =[restaurantKitchen makePizzaWithSize:pizzaSize toppings:words];
-            } else if ([size isEqualToString:@"large"]){
-                pizzaSize = large;
-                pizza =[restaurantKitchen makePizzaWithSize:pizzaSize toppings:words];
+            if([manager isEqualToString:@"man1"]){
+        
+                if([size isEqualToString:@"small"]){
+                    pizzaSize = small;
+                    pizza = [restaurantKitchen1 makePizzaWithSize:pizzaSize toppings:pizzaOrder];
+                } else if ([size isEqualToString:@"medium"]){
+                    pizzaSize = medium;
+                    pizza = [restaurantKitchen1 makePizzaWithSize:pizzaSize toppings:pizzaOrder];
+                } else if ([size isEqualToString:@"large"]){
+                    pizzaSize = large;
+                    pizza = [restaurantKitchen1 makePizzaWithSize:pizzaSize toppings:pizzaOrder];
+                }
+                
+            } else {
+                if([size isEqualToString:@"small"]){
+                    pizzaSize = small;
+                    pizza = [restaurantKitchen2 makePizzaWithSize:pizzaSize toppings:pizzaOrder];
+                } else if ([size isEqualToString:@"medium"]){
+                    pizzaSize = medium;
+                    pizza = [restaurantKitchen2 makePizzaWithSize:pizzaSize toppings:pizzaOrder];
+                } else if ([size isEqualToString:@"large"]){
+                    pizzaSize = large;
+                    pizza = [restaurantKitchen2 makePizzaWithSize:pizzaSize toppings:pizzaOrder];
+                }
+
             }
             
             [pizza printPizzaDetails];
             
-    
       //-void acceptorder(kitchen *estaurantKitchen)
             
             
             //NSLog(@"Input was %@", inputString);
             
             // Take the first word of the command as the size, and the rest as the toppings
-            NSArray *commandWords = [inputString componentsSeparatedByString:@" "];
+            //NSArray *commandWords = [inputString componentsSeparatedByString:@" "];
             
             // And then send some message to the kitchen...
         }

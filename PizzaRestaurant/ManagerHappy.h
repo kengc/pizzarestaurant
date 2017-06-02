@@ -1,5 +1,5 @@
 //
-//  Manager.h
+//  ManagerHappy.h
 //  PizzaRestaurant
 //
 //  Created by Kevin Cleathero on 2017-06-02.
@@ -9,9 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "KitchenDelegate.h"
 
-@interface Manager : NSObject <KitchenDelegate>
 
-+(NSString *)getManagerInput;
-
+@interface ManagerHappy : NSObject <KitchenDelegate>
 
 @end
