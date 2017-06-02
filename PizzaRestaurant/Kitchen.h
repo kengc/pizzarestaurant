@@ -7,9 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Pizza.h"
 
 @interface Kitchen : NSObject
 
-//- (Pizza *)makePizzaWithSize:(PizzaSize)size toppings:(NSArray *)toppings;
+//@property id<KitchenDelegate> delegate;
+
+//property BOOL upgrade;
+
+
+
+- (Pizza *)makePizzaWithSize:(PizzaSize)size toppings:(NSArray *)toppings;
+
+//- (void) takeOrder(NSArray *)order;
+//(pizzasize) parsefororder
+
+
 
 @end
