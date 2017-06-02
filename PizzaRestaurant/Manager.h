@@ -11,7 +11,6 @@
 
 @interface Manager : NSObject <KitchenDelegate>
 
-+(NSString *)getManagerInput;
 
 
 @end

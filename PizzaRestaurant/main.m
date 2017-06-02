@@ -27,6 +27,9 @@
 //Kitchen *restaurantKitchen = [Kitchen new]];
 //acceptOrder(restaurantKitch);
 
+
+
+
 int main(int argc, const char * argv[])
 {
 
@@ -51,16 +54,7 @@ int main(int argc, const char * argv[])
             
             NSMutableArray *pizzaOrder = [InputHandler parseUserInput];
             NSString *manager = [InputHandler getManagerInput];
-            
-//            NSLog(@"> ");
-//            char str[100];
-//            fgets (str, 100, stdin);
-//            
-//            NSString *inputString = [[NSString alloc] initWithUTF8String:str];
-//            
-//            inputString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-//            
-//            NSMutableArray *words = [[inputString componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] mutableCopy];
+        
             
             NSString * size = pizzaOrder[0];
             
@@ -81,7 +75,7 @@ int main(int argc, const char * argv[])
                     pizza = [restaurantKitchen1 makePizzaWithSize:pizzaSize toppings:pizzaOrder];
                 }
                 
-            } else {
+            } else if ([manager isEqualToString:@"man2"]) {
                 if([size isEqualToString:@"small"]){
                     pizzaSize = small;
                     pizza = [restaurantKitchen2 makePizzaWithSize:pizzaSize toppings:pizzaOrder];
@@ -99,13 +93,6 @@ int main(int argc, const char * argv[])
             
       //-void acceptorder(kitchen *estaurantKitchen)
             
-            
-            //NSLog(@"Input was %@", inputString);
-            
-            // Take the first word of the command as the size, and the rest as the toppings
-            //NSArray *commandWords = [inputString componentsSeparatedByString:@" "];
-            
-            // And then send some message to the kitchen...
         }
 
     }
