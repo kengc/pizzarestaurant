@@ -49,11 +49,15 @@
         
     }
     
-    
-    
-    
     return pizza;
 }
+
+//-(Manager *)manager{ //getter
+//    if(_manager == nil){
+//        _manager = self.init; //default instead of string it would be a class
+//    }
+//    return _manager;
+//}
 
 //(void)takeOrder(NSARray *)array
 //parse

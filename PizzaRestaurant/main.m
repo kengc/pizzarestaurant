@@ -13,21 +13,7 @@
 #import "Pizza.h"
 #import "Manager.h"
 #import "ManagerHappy.h"
-
-//void accepOrder(kichen *restaurantKitchen)
-//cheerymanager *    //new
-//deliverySErvice *   //new
-//
-//[happpyguy] setDelegate:happyguy];
-
-//while(tru)
-
-//main
-//autoreleasepool
-//Kitchen *restaurantKitchen = [Kitchen new]];
-//acceptOrder(restaurantKitch);
-
-
+#import "DeliveryService.h"
 
 
 int main(int argc, const char * argv[])
@@ -41,12 +27,17 @@ int main(int argc, const char * argv[])
         Kitchen *restaurantKitchen1 = [Kitchen new];
         Kitchen *restaurantKitchen2 = [Kitchen new];
         
+        DeliveryService *deliveryService = [[DeliveryService alloc] init];
+        
+        managerMean.deliveryService = deliveryService;  //depencey injection
+        managerHappy.deliveryService = deliveryService;
+        
         PizzaSize pizzaSize;
         
         restaurantKitchen1.delegate = managerMean;
         restaurantKitchen2.delegate = managerHappy;
         
-        //NSMutableArray *words = [[NSMutableArray alloc] init];
+        NSMutableArray *pizzasDelivered = [[NSMutableArray alloc] init];
         
         
         while (TRUE) {
@@ -89,10 +80,14 @@ int main(int argc, const char * argv[])
 
             }
             
-            [pizza printPizzaDetails];
-            
-      //-void acceptorder(kitchen *estaurantKitchen)
-            
+            //[pizza printPizzaDetails];
+            pizzasDelivered = managerMean.deliveryService.pizzasDelivered;
+            NSLog(@"\n");
+            NSLog(@"All the pizzas delivered today BOSS! [%lu] total...", (unsigned long)pizzasDelivered.count);
+            for(Pizza *pizza in pizzasDelivered){
+                [pizza printPizzaDetails];
+            }
+        
         }
 
     }

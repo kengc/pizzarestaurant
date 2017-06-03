@@ -10,6 +10,8 @@
 		6001EC81197B4EC300F97011 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6001EC80197B4EC300F97011 /* Foundation.framework */; };
 		6001EC84197B4EC300F97011 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC83197B4EC300F97011 /* main.m */; };
 		6001EC90197B502F00F97011 /* Kitchen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC8F197B502F00F97011 /* Kitchen.m */; };
+		730893821EE22DFF006B9519 /* DeliveryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 730893811EE22DFF006B9519 /* DeliveryService.m */; };
+		730893851EE22E10006B9519 /* DeliveryCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 730893841EE22E10006B9519 /* DeliveryCar.m */; };
 		73F148801EE0BA9300C5D821 /* Pizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F1487F1EE0BA9300C5D821 /* Pizza.m */; };
 		73F148831EE0C08500C5D821 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F148821EE0C08500C5D821 /* InputHandler.m */; };
 		73FB0AFB1EE1F014001B1E51 /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FB0AFA1EE1F014001B1E51 /* Manager.m */; };
@@ -35,6 +37,10 @@
 		6001EC86197B4EC300F97011 /* PizzaRestaurant-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PizzaRestaurant-Prefix.pch"; sourceTree = "<group>"; };
 		6001EC8E197B502F00F97011 /* Kitchen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kitchen.h; sourceTree = "<group>"; };
 		6001EC8F197B502F00F97011 /* Kitchen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Kitchen.m; sourceTree = "<group>"; };
+		730893801EE22DFF006B9519 /* DeliveryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryService.h; sourceTree = "<group>"; };
+		730893811EE22DFF006B9519 /* DeliveryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryService.m; sourceTree = "<group>"; };
+		730893831EE22E10006B9519 /* DeliveryCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryCar.h; sourceTree = "<group>"; };
+		730893841EE22E10006B9519 /* DeliveryCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryCar.m; sourceTree = "<group>"; };
 		73F1487E1EE0BA9300C5D821 /* Pizza.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pizza.h; sourceTree = "<group>"; };
 		73F1487F1EE0BA9300C5D821 /* Pizza.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pizza.m; sourceTree = "<group>"; };
 		73F148811EE0C08500C5D821 /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
@@ -86,6 +92,7 @@
 		6001EC82197B4EC300F97011 /* PizzaRestaurant */ = {
 			isa = PBXGroup;
 			children = (
+				730893861EE22E16006B9519 /* Delivery */,
 				6001EC83197B4EC300F97011 /* main.m */,
 				73F1487E1EE0BA9300C5D821 /* Pizza.h */,
 				73F1487F1EE0BA9300C5D821 /* Pizza.m */,
@@ -109,6 +116,17 @@
 				6001EC86197B4EC300F97011 /* PizzaRestaurant-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		730893861EE22E16006B9519 /* Delivery */ = {
+			isa = PBXGroup;
+			children = (
+				730893801EE22DFF006B9519 /* DeliveryService.h */,
+				730893811EE22DFF006B9519 /* DeliveryService.m */,
+				730893831EE22E10006B9519 /* DeliveryCar.h */,
+				730893841EE22E10006B9519 /* DeliveryCar.m */,
+			);
+			name = Delivery;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +182,9 @@
 			files = (
 				73F148801EE0BA9300C5D821 /* Pizza.m in Sources */,
 				6001EC90197B502F00F97011 /* Kitchen.m in Sources */,
+				730893851EE22E10006B9519 /* DeliveryCar.m in Sources */,
 				73FB0AFE1EE1F35A001B1E51 /* ManagerHappy.m in Sources */,
+				730893821EE22DFF006B9519 /* DeliveryService.m in Sources */,
 				73F148831EE0C08500C5D821 /* InputHandler.m in Sources */,
 				73FB0AFB1EE1F014001B1E51 /* Manager.m in Sources */,
 				6001EC84197B4EC300F97011 /* main.m in Sources */,

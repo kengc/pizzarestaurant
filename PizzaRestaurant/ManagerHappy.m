@@ -19,7 +19,11 @@
 }
 
 -(void)kitchenDidMakePizza:(Pizza *)pizza{
-    NSLog(@"MAMA MIA U SO BEAUTIFUL");
+    
+    //call the delivery service
+    [self.deliveryService deliverPizza:pizza];
+    
+    //NSLog(@"[Happy Manager] - MAMA MIA U SO BEAUTIFUL");
 }
 
 @end
